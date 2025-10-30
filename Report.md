@@ -34,7 +34,7 @@ All configurations surpassed the **60%** validation threshold required by the co
 ### Interpretation
 - **Augmentation strength:** Higher RandAug mag (+blur/perspective) improves robustness and smooths validation curves, though it slightly delays convergence.  
 - **Mix probability:** Lower `mix_p` (0.5–0.6) speeds up early accuracy gains but reduces regularization, leading to more oscillation and lower final accuracy.  
-- **EMA decay:** Smaller decay (0.9975) follows weights closely → faster updates, but more noise; larger decay (0.9995) yields smoother, higher final results.  
+- **EMA decay:** Smaller decay (0.9975) follows weights closely, faster updates, but more noise; larger decay (0.9995) yields smoother, higher final results.  
 - **SWA:** Averaging weights under strong aug + cosine LR caused BN mismatch and accuracy drop, so EMA checkpoints were used.
 
 ---
